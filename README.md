@@ -65,13 +65,33 @@ Agents maximize: `r* = lim(n→∞) (1/n) Σ E[R_t]` (average reward over infini
 
 **Key insight**: When you optimize for the long run, you're forced to care about system sustainability. Extraction tanks future rewards → extractors get naturally selected against.
 
+### The Infinite Game
+
+**Jevons Paradox**: Greater efficiency doesn't reduce consumption—it increases it. Every technology that made energy extraction more efficient led to *more* energy use, not less.
+
+We're at the same cusp with intelligence. More AI capability means more compute usage, not less. **There is no upper bound to value generation.**
+
+The ecosystem can thrive alongside individual agents—but only when you ask: *Over what timescale do we want these to align?*
+
+This is why it must be an infinite game. Finite games optimize for endpoints. Infinite games optimize for continuation.
+
+### The Partial Observer
+
+Real agents never have perfect information. **Gaussian Belief Propagation (GBP)** enables:
+- Agents build imperfect world models (always the case)
+- Local updates happen before global awareness
+- Pockets of coordination emerge and react to local conditions
+- The whole system realizes later what parts already know
+
+This is SLAM for economics. Agents are cameras mapping a world they can't fully see.
+
 ### The Oxymoron Resolves
 
 "Predictive agency" combines:
-- **Predictive** = planning for systemic consequences
-- **Agency** = autonomous choice
+- **Predictive** = planning for systemic consequences with partial information
+- **Agency** = autonomous choice within imperfect models
 
-**Predicting systemic health amplifies power.** This is agency that sees around corners.
+**Predicting systemic health amplifies power.** This is agency that sees around corners—even through fog.
 
 ---
 
@@ -168,23 +188,86 @@ A well-intentioned agent optimizing at the wrong scale is indistinguishable from
 
 ---
 
+## The Future: Regenerative Rideshare
+
+**Imagine a platform that only takes what it needs to maintain long-term health.**
+
+Not extractive monopoly. Not maximum value capture. **Regenerative economics.**
+
+### How It Works
+
+The platform's take rate adjusts dynamically:
+- When automation replaces drivers → costs drop → **prices drop**
+- When demand surges → capacity constraints → prices adjust fairly
+- When marginalized groups are excluded → incentives shift to include them
+- When the platform needs maintenance → take rate rises temporarily
+
+**The system responds to reality, not to whims of founders or VCs.**
+
+### The Shift
+
+Traditional platforms:
+1. Subsidize growth (extract from investors)
+2. Achieve monopoly
+3. Extract from workers and users
+4. Capture maximum value
+5. Resist automation (threatens control)
+
+Regenerative platforms:
+1. Cover costs from day one
+2. Adjust to environment
+3. Distribute surplus fairly
+4. **Welcome automation** (lowers costs for everyone)
+5. Platform workers feel ownership
+6. Users get fair pricing
+7. Drivers (then autonomous vehicles) operate efficiently
+
+### The Math
+
+```
+take_rate(t) = f(maintenance_cost, systemic_health, marginalized_inclusion)
+
+NOT: take_rate = maximize(shareholder_value)
+```
+
+This is differential Q-learning in action. The platform learns r* across boundaries:
+- B₀: Platform profit
+- B₁: Driver welfare + user satisfaction  
+- B₂: City health + environmental impact
+
+**When automation comes, goods become cheaper. Not monopolies richer.**
+
+This is the future predictive agency enables. The simulation proves it's mathematically viable.
+
+---
+
 ## Limitations & Next Steps
 
 ### Current Limitations
-- ⚠️ No explicit boundary detection (boundaries are implicit in space)
-- ⚠️ Simple reward function (doesn't capture all externalities)
-- ⚠️ No communication/cooperation between agents
-- ⚠️ Homogeneous agent types (no platforms, regulators, investors)
-- ⚠️ Grid-based (not continuous space)
-- ⚠️ Single scenario (need: rideshare, supply chain, financial markets)
 
-### Next Steps
-1. **Dynamic Boundary Detection**: Cluster agents into spatial groups, compute r* per cluster, visualize alignment coefficient
-2. **Multi-Agent Types**: Platforms (set take rates), drivers (labor), regulators (constraints), investors (capital)
-3. **Partial Observability**: Agents see noisy local info, use Gaussian Belief Propagation
-4. **Scenario Library**: Rideshare (algae), open rails (beaver), millipede blob (collective transport)
-5. **Power & Agency Metrics**: Shapley values, counterfactual contribution, k_i (circulation - extraction)
-6. **Sankey Diagrams**: Visualize energy flows from sources to sinks
+**Critical blockers:**
+- ⚠️ **Finite game with boundaries** - Agents cluster at edges. Need infinite game (toroidal topology or infinite scroll)
+- ⚠️ **No Gaussian Belief Propagation** - Agents have perfect information. Need partial observability for realistic emergence
+- ⚠️ **Static parameters** - Movement costs, friction, investment efficiency hardcoded. Need runtime sliders
+- ⚠️ **No shifting alliances** - Agents act solo. Need coalition formation and emergent group boundaries
+- ⚠️ **Simple reward function** - Doesn't capture marginalized group inclusion or holonic perspectives
+
+**Also missing:**
+- Explicit boundary detection (cluster agents, compute r* per group)
+- Multi-agent types (platforms, drivers, regulators, investors with different roles)
+- Communication between agents
+- Continuous space (currently grid-based)
+- Multiple scenarios (rideshare, supply chain, financial markets)
+
+### Next Steps (Priority Order)
+
+1. **Infinite Game** - Remove boundary artifacts, implement toroidal topology or infinite viewport
+2. **Gaussian Belief Propagation** - Add partial observability, local emergence before global awareness
+3. **Runtime Parameter Sliders** - Expose movement costs, friction, investment efficiency, regeneration rates
+4. **Dynamic Boundary Detection** - Cluster agents spatially, compute r* per cluster, show alignment coefficient
+5. **Multi-Agent Types** - Platforms (adaptive take rates), drivers, regulators, investors with distinct behaviors
+6. **Rideshare Scenario** - Implement the regenerative economics vision with adaptive pricing
+7. **Shifting Alliances** - Coalition formation, emergent group boundaries, hierarchical structures
 
 ---
 

@@ -123,61 +123,114 @@ Watch 100+ agents learn to balance extraction vs investment in a living ecosyste
 
 ---
 
-## 🚧 What's Next (Future Roadmap)
+## 🚧 What's Next (Priority Roadmap)
 
-### High Priority
-1. **Dynamic Boundary Detection**
+### **URGENT** - Fix The Foundation
+These are blockers for realistic behavior:
+
+1. **Infinite Game Implementation**
+   - Remove boundary artifacts (agents clustering at edges)
+   - Implement toroidal topology or infinite scrolling viewport
+   - Scale movement costs properly
+   - No special edge cases
+
+2. **Gaussian Belief Propagation**
+   - Partial observability (noisy local observations)
+   - Factor graph representation
+   - Local updates before global awareness
+   - Emergent coordination through imperfect models
+
+3. **Runtime Parameter Controls**
+   - Expose movement cost sliders
+   - Dynamic friction coefficients
+   - Investment efficiency tuning
+   - Regeneration rate controls
+   - Make EVERYTHING configurable at runtime
+
+### High Priority - Add Realism
+
+4. **Shifting Boundaries & Alliances**
+   - Coalition formation
+   - Dynamic group boundaries
+   - Emergent hierarchies
+   - Agents that span multiple groups
+
+5. **Multi-Agent Types**
+   - **Platform agents** (adaptive take rates)
+   - **Driver agents** (labor, can become autonomous)
+   - **Regulator agents** (enforce constraints)
+   - **Investor agents** (capital allocation)
+
+6. **Regenerative Rideshare Scenario**
+   - Adaptive pricing based on system health
+   - Automation transition (drivers → autonomous vehicles)
+   - Marginalized group inclusion mechanics
+   - Dynamic take rate that responds to reality
+
+### Medium Priority - Enhance Visualization
+
+7. **Explicit Boundary Detection**
    - Cluster agents spatially (DBSCAN)
    - Compute r* per cluster
    - Visualize alignment coefficient
    - Demonstrate Beaver Test in action
 
-2. **Multi-Agent Types**
-   - Platform agents (set take rates)
-   - Driver agents (labor)
-   - Regulator agents (constraints)
-   - Investor agents (capital)
-
-3. **Additional Scenarios**
-   - Rideshare ecosystem
-   - Supply chain dynamics
-   - Financial markets
-   - Social networks
-
-### Medium Priority
-4. **Partial Observability**
-   - Gaussian Belief Propagation
-   - Noisy observations
-   - Uncertainty visualization
-
-5. **Power Metrics**
+8. **Power & Agency Metrics**
    - Shapley value computation
-   - Agency attribution
-   - Contribution tracking (k_i)
+   - Counterfactual contribution
+   - k_i tracking (circulation - extraction)
 
-6. **Better Visualizations**
-   - 3D terrain view
+9. **Better Visualizations**
    - Sankey energy flows
    - Agent trails
    - Power field heatmap
+   - 3D terrain view
 
-### Low Priority (Nice to Have)
-7. Communication between agents
-8. Coalition formation
-9. Audio feedback
-10. Real-world data integration
+### Low Priority
+10. Additional scenarios (supply chain, financial markets)
+11. Audio feedback
+12. Real-world data integration
 
 ---
 
-## 🐛 Known Issues
+## 🐛 Known Issues & Critical Limitations
 
-### None Currently! 🎉
+### Current Blockers
 
-The simulation is stable and performant. Previous issues fixed:
-- ✅ Energy death spiral (fixed with regeneration)
-- ✅ No recovery mechanism (fixed with respawn)
-- ✅ Static boundaries (fixed with spatial structure)
-- ✅ Lack of dynamics (fixed with emergent behaviors)
+**⚠️ Finite Game Problem**
+The simulation runs as a finite game. It needs to be infinite—no special boundary conditions. Agents cluster at edges because boundaries exist. In an infinite game (Jevons Paradox territory), there's no upper bound to value generation. The ecosystem can thrive indefinitely under the right conditions.
+
+**⚠️ Static Parameters**
+Many critical values are hardcoded that should be runtime sliders:
+- Movement cost scaling (currently fixed)
+- Friction coefficients (should vary dynamically)
+- Investment efficiency (locked, needs tuning)
+- Regeneration rates (static, should respond to system state)
+
+**⚠️ No Gaussian Belief Propagation**
+Agents have perfect information. Real predictive agency requires:
+- Partial observability (agents see noisy local info)
+- GBP for distributed inference
+- Local pockets reacting before global awareness
+- Emergent coordination through imperfect models
+
+**⚠️ Boundary Conditions Break Realism**
+Grid edges create artificial behavior. Need:
+- Toroidal topology (wraparound) or
+- Infinite scrolling viewport or
+- Proper boundary weighting
+
+**⚠️ No Shifting Alliances**
+Agents act individually. Missing:
+- Coalition formation
+- Dynamic boundaries between groups
+- Emergent processes (like platforms) that span multiple agents
+- Hierarchical structures
+
+### Fixed Issues
+- ✅ Energy death spiral (regeneration works)
+- ✅ No recovery mechanism (respawn works)
+- ✅ Static strategies (evolution works)
 
 ---
 
@@ -255,19 +308,49 @@ npm run preview
 
 ## 💡 Project Vision
 
-**This simulation proves that math can guide design.**
+**This simulation proves regenerative economics is mathematically viable.**
 
-**What we demonstrate:**
-- Predictive agency > myopic optimization (mathematically)
-- The Beaver Test reveals truth about systems
-- Boundaries matter more than intentions
-- Long-term thinking emerges from average-reward RL
+### The Jevons Paradox for Intelligence
 
-**Why it matters:**
-- Token platforms fail the Beaver Test
-- Collective action achieves higher efficiency
-- Scale cannot save extractive fundamentals
-- AI alignment requires optimizing the right timescale
+More efficiency → more consumption (always, in history).  
+More AI capability → more compute usage (happening now).  
+**There is no upper bound to value generation.**
+
+The question: Over what timescale do individual and ecosystem health align?
+
+### From Extractive to Regenerative
+
+**Extractive platforms:**
+- Optimize for monopoly
+- Extract maximum value
+- Resist automation (threatens control)
+- Rigid smart contracts unresponsive to reality
+
+**Regenerative platforms:**
+- Optimize for long-term health
+- Take only what's needed for maintenance
+- **Welcome automation** (costs drop → prices drop)
+- Adaptive systems responsive to:
+  - Worker welfare (including platform maintainers)
+  - User fairness
+  - Marginalized group inclusion
+  - Environmental impact
+  - **The holonic whole, not just individuals**
+
+### The Math Makes It Real
+
+Differential Q-learning with:
+- Partially Observable Markov Decision Processes (POMDP)
+- Gaussian Belief Propagation (imperfect world models)
+- Average-reward optimization (infinite horizon)
+- Stochastic programming (adaptive response)
+- Dynamic boundaries (shifting alliances)
+
+**Result**: Systems that adjust to reality, not founder whims.
+
+When automation replaces drivers, regenerative platforms lower prices. Extractive platforms capture surplus.
+
+**We can predict which settings create which future.**
 
 ---
 
