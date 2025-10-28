@@ -55,6 +55,16 @@ This is the **Beaver Test**—and most of our economic systems are failing it.
 
 ## The Framework: Agency as Energy Flow
 
+Agents aren't optimizing for static products or fixed boundaries—they're RL processes within a process economy. Each agent continuously updates internal parameters based on limited environmental understanding, driven by the desire to maximize agency (simulated via "reward flow"). Energy flow defines collective health.
+
+When agents interplay, you get a **landscape of states connected by weighted action spaces**—a continuously evolving mapping of which actions lead to better long-term vs short-term outcomes. Boundaries between groups aren't fixed lines but shifting definitions. In-group/out-group, long-term/short-term—these aren't discrete categories but fluid gradients.
+
+The organism living within the system must organically evolve its own information and environmental interactions. This evolutionary dance of agents with imperfect information, learning from local rewards, optimizing over time—**this is the playground for reinforcement learning**. It's why we see complexity among intelligent agents.
+
+And here's the key insight: **nature itself is an intelligent agent**. There is emergent intelligence arising from the collective behavior of individual agents forming an ecosystem. The ecosystem has its own momentum, its own agency, within a wider world of other ecosystems.
+
+This is process philosophy meeting RL—and it reveals why static representations always fail to capture living systems.
+
 ### Traditional Reinforcement Learning
 Agents maximize: `Σ γᵗ R_t` (discounted future rewards)
 
@@ -366,15 +376,6 @@ If you watch one thing to understand this project's core insight, watch this.
 
 This essay liberated me from product-based thinking. The shift to **process-based thinking** is what makes this simulation possible.
 
-Agents aren't optimizing for static products or fixed boundaries—they're RL processes within a process economy. Each agent continuously updates internal parameters based on limited environmental understanding, driven by the desire to maximize agency (simulated via "reward flow"). Energy flow defines collective health.
-
-When agents interplay, you get a **landscape of states connected by weighted action spaces**—a continuously evolving mapping of which actions lead to better long-term vs short-term outcomes. Boundaries between groups aren't fixed lines but shifting definitions. In-group/out-group, long-term/short-term—these aren't discrete categories but fluid gradients.
-
-The organism living within the system must organically evolve its own information and environmental interactions. This evolutionary dance of agents with imperfect information, learning from local rewards, optimizing over time—**this is the playground for reinforcement learning**. It's why we see complexity among intelligent agents.
-
-And here's the key insight: **nature itself is an intelligent agent**. There is emergent intelligence arising from the collective behavior of individual agents forming an ecosystem. The ecosystem has its own momentum, its own agency, within a wider world of other ecosystems.
-
-This is process philosophy meeting RL—and it reveals why static representations always fail to capture living systems.
 
 ---
 
