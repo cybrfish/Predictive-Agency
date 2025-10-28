@@ -1,0 +1,301 @@
+# 🦫 Predictive Agency
+
+**A simulation framework for understanding how individual agency shapes collective outcomes**
+
+> *What if the difference between extractive monopolies and regenerative systems isn't morality—but mathematics?*
+
+---
+
+## The Core Question
+
+When an agent acts in its own interest, is it helping or harming the larger system it inhabits?
+
+Traditional economics says: **maximize individual reward**. The result? We get systems that look profitable locally but collapse globally—venture-backed platforms that extract value, algorithmic trading that destabilizes markets, industries that externalize costs.
+
+**Predictive Agency** offers a different lens: *What if agents optimized for long-run systemic health instead of short-term individual gain?* 
+
+The surprising discovery: **this isn't altruism—it's better math.**
+
+---
+
+## The Beaver Test: A Litmus Test for System Design
+
+Draw a boundary around any agent or process. Measure the **usable energy** (r*) inside.
+
+Now **expand that boundary** to include the wider ecosystem.
+
+### Pass: The Beaver 🦫
+- **Local view**: Beaver builds dam → gets food surplus ✓
+- **Ecosystem view**: Dam creates wetland → more species, more total energy ✓
+- **At every scale, energy increases**
+
+### Fail: The Algae Bloom 🦠  
+- **Local view**: Algae captures nutrients → rapid growth ✓
+- **Ecosystem view**: Algae depletes oxygen → kills fish, collapses food web ✗
+- **Looks productive narrowly, destructive widely**
+
+**The math:**
+```
+For nested boundaries B₀ ⊂ B₁ ⊂ B₂:
+
+PASS: Δr*(Bₖ → Bₖ₊₁) > 0  ∀k  (regenerative)
+FAIL: Δr*(B₀ → B₁) < 0        (extractive)
+
+Alignment coefficient:
+α = r*_ecosystem / r*_local
+
+> 1: regenerative (beaver)
+≈ 1: neutral
+< 1: extractive (algae)
+```
+
+This is the **Beaver Test**—and most of our economic systems are failing it.
+
+---
+
+## The Framework: Agency as Energy Flow
+
+### Traditional Reinforcement Learning
+Agents maximize: `Σ γᵗ R_t` (discounted future rewards)
+
+Problem: This creates **myopic optimizers** that extract value and move on.
+
+### Predictive Agency
+Agents maximize: `r* = lim(n→∞) (1/n) Σ E[R_t]` (average reward over infinite horizon)
+
+**Key insight**: When you optimize for the long run, you're forced to care about system sustainability. Extraction tanks future rewards → extractors get naturally selected against.
+
+### The Oxymoron Resolves
+
+"Predictive agency" combines:
+- **Predictive** = planning for systemic consequences
+- **Agency** = autonomous choice
+
+**Predicting systemic health amplifies power.** This is agency that sees around corners.
+
+---
+
+## The Buddhist Perspective: Boundaries Are Arbitrary
+
+The question "What's good?" depends entirely on who you include in "we."
+
+- **Narrow boundary** (just my wallet): Extraction looks profitable
+- **Medium boundary** (my company): Sustainability matters somewhat  
+- **Wide boundary** (entire ecosystem): Regeneration becomes imperative
+
+Traditional economics draws the boundary at the individual. Predictive agency recognizes that **you are part of the ecosystem**—your long-term survival depends on its health.
+
+**This is thermodynamics.**
+
+---
+
+## What This Simulation Shows
+
+This is a **living spatial ecosystem** where agents learn to balance extraction vs investment:
+
+### The System
+- **Grid**: 50×50 cells, each with resources, friction, capacity, fertility
+- **Agents**: 100+ entities that move, extract resources, or invest to improve cells
+- **Learning**: Each agent uses **Differential Q-Learning** to discover which strategies maximize long-term reward
+- **Evolution**: Dead agents respawn with strategies copied from successful survivors
+
+### The Strategies
+- 🔴 **Extractors**: Take resources, deplete cells, move on (algae behavior)
+- 🟢 **Investors**: Spend energy improving cells, build regenerative capacity (beaver behavior)  
+- 🟡 **Balanced**: Mix of both
+- 🔵 **Explorers**: Random experimentation
+
+### What Emerges
+1. **Spatial patterns**: Resource-rich zones vs depleted wastelands
+2. **Population dynamics**: Extractor booms → crash → investor takeover
+3. **Evolutionary pressure**: Successful strategies propagate through respawning
+4. **Boundary effects**: Local optimization ≠ global optimization
+
+---
+
+## Key Findings (So Far)
+
+### 1. Free Energy Requires Context
+Total system energy matters, but **distribution** matters more. A system can have high energy yet be entirely captured by extractors—a robber baron economy.
+
+Like GDP, the aggregate conceals the structure.
+
+### 2. Scale Doesn't Always Help
+"Network effects will save us" is a myth. Math shows:
+```
+N* = (ε B₀) / k   (break-even scale)
+
+If k ≤ 0 (extractive per-transaction), NO SCALE SAVES YOU
+```
+
+You can't scale your way out of extractive fundamentals.
+
+### 3. The Curvilinear Agency Curve
+```
+Too little agency → stagnation
+Moderate agency + constraints → regeneration  
+Unconstrained agency → extractive collapse
+```
+
+Maximum freedom doesn't maximize flourishing. The sweet spot is **constrained optimization toward systemic health**.
+
+### 4. Boundaries Matter More Than Intentions
+A well-intentioned agent optimizing at the wrong scale is indistinguishable from an extractive one. The boundary test reveals truth.
+
+---
+
+## Current Implementation
+
+### Core Engine
+- **`EcosystemGrid.ts`**: Spatial grid with resource regeneration, diffusion, and degradation
+- **`SpatialAgent.ts`**: Agents with movement, extraction, investment, and differential Q-learning
+- **`SpatialSimulation.ts`**: Evolutionary dynamics with respawning and strategy propagation
+- **`SpatialView.svelte`**: Real-time canvas visualization
+
+### Features
+✅ Spatial resource dynamics with regeneration  
+✅ Agent learning via differential Q-learning (per-agent r̄)  
+✅ Four behavioral strategies (extractor, investor, balanced, explorer)  
+✅ Evolutionary pressure (successful strategies spread)  
+✅ Interactive interventions (deplete/enrich regions, add agents)  
+✅ Real-time visualization with energy tracking  
+
+### Experiments You Can Run
+1. **80% extractors, 20% investors** → Watch collapse and recovery
+2. **Deplete center** → See migration patterns emerge
+3. **100% investors** → Observe high-energy equilibrium  
+4. **Add extractors to stable system** → Test resilience
+
+---
+
+## Limitations & Next Steps
+
+### Current Limitations
+- ⚠️ No explicit boundary detection (boundaries are implicit in space)
+- ⚠️ Simple reward function (doesn't capture all externalities)
+- ⚠️ No communication/cooperation between agents
+- ⚠️ Homogeneous agent types (no platforms, regulators, investors)
+- ⚠️ Grid-based (not continuous space)
+- ⚠️ Single scenario (need: rideshare, supply chain, financial markets)
+
+### Next Steps
+1. **Dynamic Boundary Detection**: Cluster agents into spatial groups, compute r* per cluster, visualize alignment coefficient
+2. **Multi-Agent Types**: Platforms (set take rates), drivers (labor), regulators (constraints), investors (capital)
+3. **Partial Observability**: Agents see noisy local info, use Gaussian Belief Propagation
+4. **Scenario Library**: Rideshare (algae), open rails (beaver), millipede blob (collective transport)
+5. **Power & Agency Metrics**: Shapley values, counterfactual contribution, k_i (circulation - extraction)
+6. **Sankey Diagrams**: Visualize energy flows from sources to sinks
+
+---
+
+## Why This Matters
+
+**We're building proof that math can guide design.**
+
+The simulation demonstrates what theory predicts:
+- Token platforms fail the Beaver Test
+- Collective action achieves higher efficiency
+- Scale cannot save extractive fundamentals
+- AI alignment requires optimizing the right timescale
+
+**The demo is the argument.**
+
+---
+
+## The Philosophy in Code
+
+This project embodies a shift in thinking:
+
+**Old paradigm**: Maximize individual utility, hope for emergent good  
+**New paradigm**: Optimize for systemic health, discover individual benefit follows
+
+**Old metric**: GDP, revenue, "total value created"  
+**New metric**: r* across boundaries, alignment coefficient, energy distribution
+
+**Old question**: "How can I extract maximum value?"  
+**New question**: "What boundary am I optimizing for, and who's excluded?"
+
+When agents learn to think like ecosystems, ecosystems start to thrive.
+
+---
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Open browser to http://localhost:5173
+```
+
+### Controls
+- **Play/Pause/Step**: Control simulation
+- **Reset**: New random initialization  
+- **Deplete Center**: Create resource crisis
+- **Enrich Center**: Add resource bounty
+- **Add Extractors/Investors**: Perturb the population
+
+### Config
+Adjust initial conditions:
+- Grid size (20×20 to 80×80)
+- Number of agents (50 to 300)
+- Strategy distribution (% extractors, investors, balanced, explorers)
+
+---
+
+## Theoretical Foundation
+
+Based on:
+- **Average-reward reinforcement learning** (Mahadevan 1996)
+- **Differential Q-learning** (long-run optimization without discounting)
+- **Shapley values** (fair attribution in cooperative games)
+- **Gaussian Belief Propagation** (distributed inference under uncertainty)
+- **Thermodynamics** (energy flow, dissipation, regeneration)
+- **Buddhist philosophy** (interdependence, non-separation)
+
+Inspired by:
+- Kevin Kelly's "1000 True Fans" (network sustainability)
+- Elinor Ostrom's work on commons governance  
+- Stuart Kauffman's "adjacent possible"
+- Geoffrey West's scaling laws
+- The millipede blob (collective transport dynamics)
+
+---
+
+## Contributing
+
+This is an open exploration. Contributions welcome:
+- New scenarios (supply chains, financial markets, social networks)
+- Better visualizations (3D, WebGL, audio feedback)
+- Theoretical extensions (communication, hierarchy, evolution)
+- Real-world data integration (actual take rates, emissions, etc.)
+
+---
+
+## License
+
+MIT
+
+---
+
+## Citation
+
+If this framework influences your work, cite as:
+
+```
+Predictive Agency: A Simulation Framework for Understanding Agency-Energy Dynamics in Complex Systems
+https://github.com/cybrfish/predictive-agency
+```
+
+---
+
+**The difference between algae and beavers is mathematical.**  
+**Let's build systems that pass the test.** 🦫
+
+---
+
+*"The boundary you draw determines the truth you see."*
+
