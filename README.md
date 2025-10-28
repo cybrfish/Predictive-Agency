@@ -340,11 +340,41 @@ Based on:
 - **Buddhist philosophy** (interdependence, non-separation)
 
 Inspired by:
-- Kevin Kelly's "1000 True Fans" (network sustainability)
-- Elinor Ostrom's work on commons governance  
-- Stuart Kauffman's "adjacent possible"
-- Geoffrey West's scaling laws
-- The millipede blob (collective transport dynamics)
+
+### [Learning and Planning in Average-Reward Markov Decision Processes](https://arxiv.org/abs/2006.16318)
+**Yi Wan, Abhishek Naik, Richard S. Sutton**
+
+This paper provides the mathematical foundation for infinite games. The breakthrough: **reference-free learning**.
+
+Traditional average-reward RL requires a baseline—some idealized reference state you define at the start. But that baseline is only ideal *for that moment*. As the environment evolves, as agents adapt, as interactions shift, the ideal changes. A system stuck optimizing against a fixed reference cannot adapt to emergent realities.
+
+Wan, Naik, and Sutton proved you can learn without a reference state—the first off-policy model-free control algorithm that converges to actual value functions, not value-plus-offset. This unlocks adaptive systems that discover changing ideals rather than chase static targets.
+
+**This is why the simulation doesn't hardcode "good" strategies.** Agents discover what works *now*, not what we thought would work *then*.
+
+### [The Profit Paradox](https://youtu.be/c1zssAsg9ZY?si=m6G6q62b6XMFimu2)
+**Art of the Problem (YouTube)**
+
+Where the **Beaver Test** comes from. 
+
+One of the most influential pieces of media I've encountered—it fundamentally changed how I see agency and value creation. The video elegantly shows why local optimization (profit maximization) diverges from systemic health, and why some processes regenerate while others extract.
+
+If you watch one thing to understand this project's core insight, watch this.
+
+### [Representation Vs. Reality: Why We Need a Process Economy Now](https://return2process.substack.com/p/representation-vs-reality-why-we)
+**Marcus Barrick**
+
+This essay liberated me from product-based thinking. The shift to **process-based thinking** is what makes this simulation possible.
+
+Agents aren't optimizing for static products or fixed boundaries—they're RL processes within a process economy. Each agent continuously updates internal parameters based on limited environmental understanding, driven by the desire to maximize agency (simulated via "reward flow"). Energy flow defines collective health.
+
+When agents interplay, you get a **landscape of states connected by weighted action spaces**—a continuously evolving mapping of which actions lead to better long-term vs short-term outcomes. Boundaries between groups aren't fixed lines but shifting definitions. In-group/out-group, long-term/short-term—these aren't discrete categories but fluid gradients.
+
+The organism living within the system must organically evolve its own information and environmental interactions. This evolutionary dance of agents with imperfect information, learning from local rewards, optimizing over time—**this is the playground for reinforcement learning**. It's why we see complexity among intelligent agents.
+
+And here's the key insight: **nature itself is an intelligent agent**. There is emergent intelligence arising from the collective behavior of individual agents forming an ecosystem. The ecosystem has its own momentum, its own agency, within a wider world of other ecosystems.
+
+This is process philosophy meeting RL—and it reveals why static representations always fail to capture living systems.
 
 ---
 
