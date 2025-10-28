@@ -84,6 +84,24 @@ export class Agent {
     // (Will be expanded in Phase 2)
   }
   
+  updateEnergy(systemSurplus: number): void {
+    // Energy cost is proportional to service level
+    const energyCost = this.action.serviceLevel * 0.5;
+
+    // Energy gain follows an S-curve based on a carrying capacity.
+    const carryingCapacity = 150; // Max energy per agent
+    const currentEnergy = this.localState.energy;
+    const growthRate = 0.1;
+    // The closer to capacity, the harder it is to gain more energy
+    const gainFactor = 1 - (currentEnergy / carryingCapacity);
+    
+    // Gain from surplus is modulated by the gainFactor
+    const energyGain = (systemSurplus / 100) * 1.5 * Math.max(0, gainFactor);
+
+    this.localState.energy += energyGain - energyCost;
+    this.localState.energy = clamp(this.localState.energy, 0, carryingCapacity);
+  }
+
   updateQ(reward: number, rBar: number, alpha: number): void {
     // This will be called by DifferentialQ
     // Placeholder for now
@@ -114,6 +132,13 @@ export class Agent {
   // Helper method to set Q-value
   setQ(state: GlobalState, action: Action, value: number): void {
     const key = this.stateActionKey(state, action);
-    this.Q.set(key, value);
+    
+    // Add a penalty for deviating from the agent's inherent takeRate
+    const takeRateDiscomfort = Math.abs(action.takeRate - this.initialTakeRate) * 5.0;
+    this.Q.set(key, value - takeRateDiscomfort);
   }
+}
+
+function clamp(v: number, lo: number, hi: number): number {
+  return Math.max(lo, Math.min(hi, v));
 }

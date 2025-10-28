@@ -2,6 +2,17 @@ import type { BoundaryLevel } from './types';
 
 export class BoundaryManager {
   current: BoundaryLevel = 'B0';
+  // Tunable weights and couplings per boundary level (mutable via UI)
+  weights: Record<BoundaryLevel, { friction: number, safety: number }> = {
+    B0: { friction: 0, safety: 1.0 },
+    B1: { friction: 0.35, safety: 1.1 },
+    B2: { friction: 0.7, safety: 1.3 },
+  };
+  couplings: Record<BoundaryLevel, { congestionToCapacity: number, safetyToTrust: number }> = {
+    B0: { congestionToCapacity: 0.0, safetyToTrust: 0.0 },
+    B1: { congestionToCapacity: 0.04, safetyToTrust: 0.03 },
+    B2: { congestionToCapacity: 0.08, safetyToTrust: 0.06 },
+  };
   
   expand(): void {
     if (this.current === 'B0') {
@@ -17,19 +28,18 @@ export class BoundaryManager {
   }
   
   getRewardWeights(): { friction: number, safety: number } {
-    switch (this.current) {
-      case 'B0':
-        // Network-only view, ignore externalities
-        return { friction: 0, safety: 1.0 };
-      case 'B1':
-        // Include local externalities (congestion, safety spillovers)
-        return { friction: 0.1, safety: 0.8 };
-      case 'B2':
-        // Include regional effects (more weight on externalities)
-        return { friction: 0.2, safety: 0.6 };
-      default:
-        return { friction: 0, safety: 1.0 };
-    }
+    return this.weights[this.current];
+  }
+  getRewardWeightsFor(level: BoundaryLevel): { friction: number, safety: number } {
+    return this.weights[level];
+  }
+
+  // Coupling strengths used by dynamics to expose externalities beyond B0
+  getDynamicsCouplings(): { congestionToCapacity: number, safetyToTrust: number } {
+    return this.couplings[this.current];
+  }
+  getDynamicsCouplingsFor(level: BoundaryLevel): { congestionToCapacity: number, safetyToTrust: number } {
+    return this.couplings[level];
   }
 
   reset(): void {

@@ -1,11 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import * as d3 from 'd3';
-  import type { HistoryEntry } from '../core/types';
 
-  export let data: HistoryEntry[] = [];
+  type HistoryData = Record<string, any> & { t: number };
+
+  export let data: HistoryData[] = [];
   export let title: string;
-  export let yKey: keyof HistoryEntry;
+  export let yKey: string;
 
   let svgElement: SVGSVGElement;
   const margin = { top: 20, right: 30, bottom: 30, left: 40 };
@@ -30,7 +31,7 @@
       .domain(d3.extent(data, d => d.t) as [number, number])
       .range([0, innerWidth]);
 
-    const yValue = (d: HistoryEntry) => {
+    const yValue = (d: HistoryData) => {
       const val = d[yKey];
       return typeof val === 'number' ? val : 0;
     };
@@ -48,7 +49,7 @@
     svg.append('g')
       .call(d3.axisLeft(y));
 
-    const line = d3.line<HistoryEntry>()
+    const line = d3.line<HistoryData>()
       .x(d => x(d.t))
       .y(d => y(yValue(d)));
 

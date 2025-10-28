@@ -33,6 +33,14 @@ export interface HistoryEntry {
   reward: number;
   alpha: number;
   state: GlobalState;
+  totalEnergy: number;
+  avgAgency: number;
+  rBarB0?: number;
+  rBarB1?: number;
+  rBarB2?: number;
+  rInstB0?: number;
+  rInstB1?: number;
+  rInstB2?: number;
 }
 
 export interface Message {
