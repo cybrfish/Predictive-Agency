@@ -105,7 +105,7 @@ The question "What's good?" depends entirely on who you include in "we."
 
 Traditional economics draws the boundary at the individual. Predictive agency recognizes that **you are part of the ecosystem**—your long-term survival depends on its health.
 
-**This is thermodynamics.**
+**This is Economic Thermodynamics.**
 
 ---
 
