@@ -1,0 +1,94 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+dist/
+dist-ssr/
+*.local
+
+# Svelte
+.svelte-kit/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# IDE - VSCode
+.vscode/
+*.code-workspace
+
+# IDE - JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# OS - Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# OS - macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# OS - Linux
+*~
+
+# Editor backup files
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Vite
+.vite/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Storybook
+storybook-static
+
+# Vercel
+.vercel
+
+# Vite HMR cache
+.history/
+
+# Debug files
+.vscode-test
+
